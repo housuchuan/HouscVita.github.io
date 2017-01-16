@@ -5,26 +5,58 @@
 -->
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title>侯苏川的个人简历</title>
-    <!--加载mui基础css-->
-    <link href="css/common/mui.min.css" rel="stylesheet"/>
-    <!--个性化css-->
-    <link rel="stylesheet" type="text/css" href="css/personalVita/personalVita.css"/>
-</head>
-<body>
-	
-	
-	
-	
-	
-	
-	<!--加载相应js模块-->
-	<script src="js/libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/libs/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
-	<!--个性化js-->
-	<script type="text/javascript" src="js/bizlogic/personalVita/personalVita.js" ></script>
-</body>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--加载mui基础css-->
+		<link href="css/common/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/common/common.css" />
+		<!--引入滚动动画插件-->
+		<link rel="stylesheet" href="css/common/onepage-scroll.css" />
+		<link rel="stylesheet" href="css/common/commonStyle.css" />
+		<!--个性化css-->
+		<link rel="stylesheet" type="text/css" href="css/personalVita/personalVita.css" />
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="main">
+				<section class="page1">
+
+				</section>
+
+				<section class="page2">
+
+				</section>
+
+				<section class="page3">
+
+				</section>
+
+				<section class="page4">
+
+				</section>
+			</div>
+		</div>
+
+		<!--加载相应js模块-->
+		<script src="js/libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/libs/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入jquery基础的动画插件-->
+		<script type="text/javascript" src="js/libs/jquery.onepage-scroll.js"></script>
+		<!--个性化js-->
+		<script type="text/javascript" src="js/bizlogic/personalVita/personalVita.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".main").onepage_scroll({
+					sectionContainer: "section",
+					responsiveFallback: 600,
+					loop: true
+				});
+			});
+		</script>
+	</body>
+
 </html>

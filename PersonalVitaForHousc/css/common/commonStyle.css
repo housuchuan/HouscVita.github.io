@@ -106,7 +106,9 @@ header {
 }
 
 .main section.page1 {
-	background: rgb(230, 217, 200);
+	/*background: rgb(230, 217, 200);*/
+	background: url(../../img/bg.jpg) no-repeat;
+	background-size: 120% 120%;
 }
 
 .main section.page2 {

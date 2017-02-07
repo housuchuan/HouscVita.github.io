@@ -112,7 +112,7 @@ header {
 }
 
 .main section.page2 {
-	background: #555557 url(back-phone.png) no-repeat center -150px;
+	/*background: #555557 url(back-phone.png) no-repeat center -150px;*/
 }
 
 .main section.page2 .page_container {
@@ -126,7 +126,7 @@ header {
 }
 
 .main section.page3 {
-	background: url(tilted-phone.png) no-repeat 156px -150px;
+	/*background: url(tilted-phone.png) no-repeat 156px -150px;*/
 }
 
 .main section.page3 .page_container {

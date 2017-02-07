@@ -9,7 +9,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title></title>
+		<title>个人简历--侯苏川</title>
 		<!--加载mui基础css-->
 		<link href="css/common/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="css/common/common.css" />
@@ -23,17 +23,23 @@
 	<body>
 		<div class="wrapper">
 			<!--我的介绍栏目头-->
-			<div class="data-introduction mui-clearfix">
-				<div class="name">侯苏川</div>
-				<div class="data-item2">
-					<span>housc</span>
-					<span>个人简历</span>
+			<div class="data-introduction mui-clearfix" id="userinfo">
+				<div class="name cursor mui-pull-left">侯苏川</div>
+				<div class="data-item2 mui-pull-left cursor">
+					<span class="introuce-name">housc</span>
+					<span class="introduce-file">个人简历</span>
 				</div>
 			</div>
 			<!--内容分页部分，主要介绍个人资料已经经验-->
 			<div class="main">
-				<section class="page1">
-
+				<section class="page1" id="page1">
+					<div class="personal-detailinfo">
+						<div class="personal-img"></div>
+						<h4 class="personal-declaration">生活就是一场旅行,走的越远，看的越多</h4>
+						<div class="personal-detail" id="personal-detail">
+							
+						</div>
+					</div>
 				</section>
 
 				<section class="page2">
@@ -57,15 +63,6 @@
 		<script type="text/javascript" src="js/libs/jquery.onepage-scroll.js"></script>
 		<!--个性化js-->
 		<script type="text/javascript" src="js/bizlogic/personalVita/personalVita.js"></script>
-		<script>
-			$(document).ready(function() {
-				$(".main").onepage_scroll({
-					sectionContainer: "section",
-					responsiveFallback: 600,
-					loop: true
-				});
-			});
-		</script>
 	</body>
 
 </html>

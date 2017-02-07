@@ -4,31 +4,38 @@
 	*描述：  a vita for housc
  */
 
-/*个人介绍栏目头*/
+body {
+	font-size: 14px;
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+/*个人介绍栏目头(第一副资料块)*/
+.page1 {
+	padding-top: 300px;
+}
+
 .data-introduction {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	height: 60px;
+	padding: 5px 0;
 	background-color: #d4d4d4;
 	opacity: .1;
 	z-index: 1000;
-}
-
-.data-introduction div {
-	float: left;
-	display: inline-block;
 }
 
 .name {
 	width: 60px;
 	line-height: 60px;
 	text-align: center;
-	margin-left: 15px;
-	border-radius: 38px;
-	background-color: #929292;
+	margin: 0 15px;
 	font-size: 15px;
 	color: #fff;
+	border-radius: 38px;
+	background-color: #929292;
 	/*自定义动画*/
 	transition: box-shadow 1.5s , color 1.5s;
 	-moz-transition: box-shadow 1.5s , color 1.5s;	/* Firefox 4 */
@@ -42,18 +49,58 @@
 }
 
 .data-item2 {
-	height: 60px;
 	margin-left: 15px;
-	font-size: 14px;
 }
 
 .data-item2 span {
 	display: block;
-	line-height: 30px;
+	line-height: 29px;
 }
 
 .data-item2 span:first-child {
 	border-bottom: 1px solid #333333;
 }
+
+.personal-detailinfo {
+	margin-top: 380px;
+	width: 800px;
+	margin: 0 auto;
+}
+
+.personal-img {
+	width: 150px;
+	height: 150px;
+	margin: 0 auto 13px auto;
+	background: url(../../img/userimg-2.jpg) no-repeat;
+	background-size: 100% 100%;
+	border-radius: 100px;
+	/*自定义动画*/
+	transition: background 1.5s , background-size 1.5s;
+	-moz-transition: background 1.5s , background-size 1.5s;	/* Firefox 4 */
+	-webkit-transition: background 1.5s , background-size 1.5s;	/* Safari 和 Chrome */
+	-o-transition: background 1.5s , background-size 1.5s;	/* Opera */
+}
+
+.personal-img:hover {
+	background: url(../../img/userimg-1.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+
+.personal-declaration {
+	display: none;
+}
+
+.personal-declaration {
+	margin: 15px auto;
+	color: #454545;
+}
+
+.personal-detail {
+	width: 0;
+	height: 100px;
+	margin: 0 auto;
+	border-top: 2px solid #cccccc;
+}
+
 
 

@@ -28,6 +28,7 @@ $(document).ready(function() {
 		
 	//数据断续加载
 	var sliderpage = function(){
+		var $personalPubinfo = $('#personal-pubinfo li');
 		
 		//个人信息头颜色渐变
 		$userInfo.animate({
@@ -42,7 +43,11 @@ $(document).ready(function() {
 			$('.personal-declaration',$page1).fadeIn(1500,function(){
 				$declaration.animate({
 					width: '100%'
-				}, 1500);
+				}, 1500,function(){
+					for (var i = 0; i < $personalPubinfo.length; i++) {
+						$($personalPubinfo[i]).fadeIn((i+1)*1500);
+					};
+				});
 			});
 		});
 	};
@@ -62,4 +67,61 @@ $(document).ready(function() {
 	});
 	
 })(jQuery);
+
+//第二模块开发
+$(function($){
+	//轮播图
+	//声明DOM
+	var $worklistdom = $('#workinfo-list'),
+		$workdom = $('#work');
+	//声明常量
+	var worklisthei = parseInt($worklistdom.height()),
+		//外层包裹层高度
+		workhei = parseInt($workdom.height());
+		
+	//函数执行区
+	//信息轮播定时器
+	var inforun = function(){
+		if (worklisthei <= workhei) {
+			//函数不执行
+		} else{
+			$worklistdom.animate({
+				marginTop: '-40px'
+			},3000,function(){
+				$worklistdom.children('li:first-child').appendTo($worklistdom);
+				$worklistdom.css('margin-top','0');
+			});
+		};
+	};
+	//启动定时器
+	var personalrun = setInterval(inforun,3000);
+	
+	$workdom.hover(function(){
+		//清除定时器
+		clearInterval(personalrun);
+	},function(){
+		//重新开启定时器
+		personalrun = setInterval(inforun,3000);
+	});
+}(jQuery));
+
+//第三模块开发
+$(function($){
+	//声明dom
+	var skilldom = $('#skill');
+	skilldom.on('click','.skill-icon',function(){
+		var _this = $(this).parent().find('.skill-arrow'),
+			_thisD = $(this).parent().find('.skill-detail'),
+			_thisR = $(this).parents('li').siblings().find('.skill-arrow'),
+			_thisDr = $(this).parents('li').siblings().find('.skill-detail');
+		if (_this.hasClass('skill-active')) {
+			_this.removeClass('skill-active');
+		} else{
+			_this.addClass('skill-active');
+		};
+		_thisR.removeClass('skill-active');
+		_thisDr.slideUp();
+		_thisD.stop().slideToggle();
+	});
+}(jQuery));
 

@@ -105,7 +105,12 @@ header {
 	overflow: hidden;
 }
 
-.main section.page1 {
+.main section.page1,
+.main section.page2,
+.main section.page3,
+.main section.page4,
+.main section.page5,
+.main section.page6 {
 	/*background: rgb(230, 217, 200);*/
 	background: url(../../img/bg.jpg) no-repeat;
 	background-size: 120% 120%;

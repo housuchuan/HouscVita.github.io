@@ -6,6 +6,7 @@
 
 body {
 	font-size: 14px;
+	font-family: "microsoft yahei";
 }
 
 .cursor {
@@ -97,10 +98,384 @@ body {
 
 .personal-detail {
 	width: 0;
-	height: 100px;
+	/*height: 1px;*/
 	margin: 0 auto;
 	border-top: 2px solid #cccccc;
 }
 
+.personal-pubinfo {
+	margin-top: 10px;
+}
+
+.personal-pubinfo > li {
+	display: none;
+	overflow: hidden;
+	line-height: 36px;
+}
+
+/*关于我*/
+.aboutMe {
+	margin-top: 100px;
+}
+
+.aboutMe h1 {
+	width: 150px;
+	margin: 0 auto;
+	padding: 8px 0;
+	font-size: 25px;
+	font-weight: bold;
+	border-bottom: 2px solid red;
+}
+
+.aboutMe div {
+	padding: 8px 0;
+	color: red;
+	transition:transform 2s;
+	-moz-transition:transform 2s; /* Firefox 4 */
+	-webkit-transition:transform 2s; /* Safari and Chrome */
+}
+
+.aboutMe div:hover {
+	transform: rotateY(360deg);
+	-webkit-transform: rotateY(360deg);	/* Safari 和 Chrome */
+	-moz-transform: rotateY(360deg);	/* Firefox */
+	cursor: pointer;
+}
+
+.personal-swrapper {
+	width: 700px;
+	margin: 32px auto 0 auto;
+	padding: 11px 0 18px 0;
+	border-radius: 15px;
+	background-color: gray;
+}
+
+.personal-swrapper li {
+	float: left;
+	width: 88px;
+	margin-left: 72px;
+	cursor: pointer;
+}
+
+.personal-xl .bgi {
+	background: url(../../img/education.png) no-repeat;
+	background-position: center;
+}
+
+.personal-age .bgi {
+	background: url(../../img/age.png) no-repeat;
+	background-position: center;
+}
+
+.personal-location .bgi {
+	background: url(../../img/location.png) no-repeat;
+	background-position: center;
+}
+
+.personal-status .bgi {
+	background: url(../../img/status.png) no-repeat;
+	background-position: center;
+}
+
+.personal-xldetail {
+	margin-top: 16px;
+	text-align: right;
+	font-size: 16px;
+	color: #fff;
+}
+
+.bgi {
+	width: 80px;
+	height: 80px;
+	border: 4px solid #fff;
+	border-radius: 40px;
+	/*自定义动画*/
+	transition: border 1.5s , background-color 1.5s , transform 1.5s;
+	-moz-transition: border 1.5s , background-color 1.5s , transform 1.5s;	/* Firefox 4 */
+	-webkit-transition: border 1.5s , background-color 1.5s , transform 1.5s;	/* Safari 和 Chrome */
+	-o-transition: border 1.5s , background-color 1.5s , transform 1.5s;	/* Opera */
+}
+
+.personal-swrapper li:hover .bgi {
+	border: 4px solid darkgray;
+	background-color: #fff;
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);	/* Safari 和 Chrome */
+	-moz-transform: rotateY(180deg);	/* Firefox */
+}
+
+p {
+	text-align: left;
+	color: #fff;
+}
+
+.detailline:before {
+	display: block;
+	width: 100%;
+	content: '';
+	height: 2px;
+	background-color: #fff;
+	transform: rotate(30deg);
+}
+
+/*工作*/
+.center {
+	margin: 0 auto;
+}
+
+.work {
+	position: relative;
+	width: 800px;
+	height: 160px;
+	padding: 0 75px;
+	margin-top: 40px;
+	overflow: hidden;
+}
+
+.work:before,
+.work:after {
+	width: 52px;
+	height: 52px;
+	content: '';
+}
+
+.work:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-top: 2px solid #5686d6;
+	border-left: 2px solid #5686d6;
+}
+
+.work:after {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	border-right: 2px solid #5686d6;
+	border-bottom: 2px solid #5686d6;
+}
+
+.workinfo li {
+	line-height: 40px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 
 
+/*第三模块开发*/
+.skill {
+	width: 1075px;
+}
+
+.skill > p {
+	margin: 59px 0 65px 0;
+	text-align: center;
+	color: #000000;
+}
+
+.skill-area {
+	float: left;
+	width: 25%;
+	cursor: pointer;
+}
+
+.skill-icon {
+	margin: 0 auto;
+	transition: transform 1s;
+	-moz-transition: transform 1s;	/* Firefox 4 */
+	-webkit-transition: transform 1s;	/* Safari 和 Chrome */
+	-o-transition: transform 1s;	/* Opera */
+}
+
+.skill-icon:hover {
+	transform: scale(1.2);
+	-ms-transform: scale(1.2);		/* IE 9 */
+	-webkit-transform: scale(1.2);	/* Safari and Chrome */
+	-o-transform: scale(1.2);		/* Opera */
+	-moz-transform: scale(1.2);		/* Firefox */
+}
+
+.skill-name {
+	margin: 24px 0;
+}
+
+.skill-detail {
+	display: none;
+	width: 350px;
+	padding: 19px 0 19px 30px;
+	font-size: 12px;
+	background-color: #c8c8dc;
+	border-radius: 8px;
+}
+
+.skill-arrow {
+	transition: transform 2s;
+	-moz-transition: transform 2s;	/* Firefox 4 */
+	-webkit-transition: transform 2s;	/* Safari 和 Chrome */
+	-o-transition: transform 2s;	/* Opera */
+}
+
+.skill-active {
+	transform: rotateX(180deg);
+	-ms-transform: rotateX(180deg);		/* IE 9 */
+	-webkit-transform: rotateX(180deg);	/* Safari and Chrome */
+	-o-transform: rotateX(180deg);		/* Opera */
+	-moz-transform: rotateX(180deg);		/* Firefox */
+}
+
+.skill-detail li {
+	text-align: left;
+	list-style-type: disc;
+}
+
+/*轮播图*/
+.ewb-rslides {
+    margin-top: 100px;
+}
+
+
+/* Slideshow  */
+
+.ewb-rslides-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#slider-pager {
+    position: absolute;
+    bottom: 10px;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+}
+
+#slider-pager li {
+    display: inline-block;
+    margin-left: 15px;
+    border: 2px solid #999;
+    *display: inline;
+    *zoom: 1;
+}
+
+#slider-pager .ewb-rslides-cur {
+    border: 2px solid #fff;
+}
+
+#slider-pager img {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+#slider > li {
+	position: relative;
+	width: 100%;
+	height: 315px;
+}
+
+.coinfo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 25px;
+	text-align: left;
+	margin: 80px 0 0 120px;
+}
+
+.coinfo > li {
+	list-style-type: disc;
+}
+
+h2,
+h4 {
+	line-height: 25px;
+	font-size: 18px;
+}
+
+h4 {
+	font-size: 15px;
+}
+
+#slider img {
+	width: 100%;
+	height: 100%;
+}
+
+.experience p {
+	margin: 20px 0 0 0;
+}
+
+/*第四模块开发*/
+.contact {
+	margin-top: 20px;
+	padding-bottom: 100px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.quality {
+	width: 400px;
+}
+
+.quality > li {
+	float: left;
+	width: 100px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.translate {
+	width: 480px;
+}
+
+.translate > li {
+	float: left;
+	width: 120px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 23px;
+}
+
+.diligent {
+	color: #0062CC;
+}
+
+.consider {
+	color: #242424;
+}
+
+.dream {
+	color: #4CD964;
+}
+
+.choice {
+	color: #6641E2;
+}
+
+.gnosis {
+	margin-top: 20px;
+}
+
+.gnosis li {
+	line-height: 30px;
+}
+
+/*底部*/
+.footer {
+	width: 340px;
+	margin: 30px auto 0 auto;
+}
+
+.footer li {
+	float: left;
+}
+
+.footer a {
+	margin: 0 8px;
+	color: #808080;
+}
+
+.footer a:hover {
+	color: #333333;
+}
